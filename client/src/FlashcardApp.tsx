@@ -3,6 +3,7 @@ import { isRecord } from './record';
 
 
 
+
 type Page = {kind: "home"} | {kind: "take", name:string} | {kind: "create"} | {kind: "score"};
 
 type FlashcardAppState = {
@@ -22,9 +23,7 @@ export class FlashcardApp extends Component<{}, FlashcardAppState> {
     this.state = {page: {kind: "home"}, error: "", name: "", correct:0, incorrect:0};
   }
   
-  render = (): JSX.Element => {
-    return;
-  };
+
 
 
   //Changes state back to home page
