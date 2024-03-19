@@ -7,7 +7,6 @@ type Page = {kind: "home"} | {kind: "take", name:string} | {kind: "create"} | {k
 
 type FlashcardAppState = {
   page: Page;
-  deck: card[];
   error: string
   name: string
   correct:number;
@@ -20,23 +19,11 @@ export class FlashcardApp extends Component<{}, FlashcardAppState> {
   constructor(props: {}) {
     super(props);
 
-    this.state = {page: {kind: "home"}, deck:[], error: "", name: "", correct:0, incorrect:0};
+    this.state = {page: {kind: "home"}, error: "", name: "", correct:0, incorrect:0};
   }
   
   render = (): JSX.Element => {
-    if (this.state.page.kind === "home"){
-      return <HomePage onNewClick={this.doNewClick}
-                       onDeckClick={this.doDeckClick}/>;
-    }
-    else if (this.state.page.kind === "create"){
-      return <CreateQuiz  onBackClick={this.doBackClick}/>;
-    }
-    else if (this.state.page.kind === "take"){
-      return <TakeQuiz cards={this.state.deck} name = {this.state.name} onFinishedQuizClick={this.doFinishedQuizClick}/>;
-    }
-    else{
-      return <SaveScore name= {this.state.name} correct={this.state.correct} incorrect={this.state.incorrect} onFinishClick={this.doFinishClick}/>;
-    }
+    return;
   };
 
 
