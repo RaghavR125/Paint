@@ -1,10 +1,5 @@
 import React, { Component} from "react";
 import { isRecord } from './record';
-import { HomePage } from "./HomePage";
-import { CreateQuiz } from "./CreateQuiz";
-import { TakeQuiz } from "./TakeQuiz";
-import { card } from "./CreateQuiz";
-import { SaveScore } from "./SaveScore";
 
 
 
